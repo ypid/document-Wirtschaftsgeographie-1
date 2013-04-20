@@ -1,7 +1,8 @@
-%% <Schule/Epochenheft.tex> Vorlageversion 1.1.1 <Robin Schneider>
-%%%Präambel
+%% <school/Epochenheft.tex> template 1.1.1 by Robin `ypid` Schneider <ypid23@aol.de>
+%% The current version can be found on: https://github.com/ypid/typesetting/blob/master/templates/school/Epochenheft.tex
+%%% preamble
 %\RequirePackage{snapshot}		%% \jobname.dep
-%\listfiles	%% listfiles in die Logdatei
+%\listfiles %% listfiles to logfile
 \RequirePackage{RequirePackageRS}
 \documentclass[12pt,a4paper,ngerman,numbers=noenddot,toc=listof]{scrartcl}	%% ,draft,pointednumbers,
 \usepackage{
@@ -31,7 +32,7 @@
 \definecolor{KlimaguertelSubtropisch}{rgb}{1,0.8,0}
 \definecolor{KlimaguertelTropisch}{rgb}{0.94,0.53,0.53}
 \newcommand{\usedcolor}{green!70!black}		%% Benutzt für Tikz Mindmap
-%% Spetzifische angaben
+%% specific indications
 \readgitstat{7}
 \input{files/metainfos}
 \usepackage{
@@ -44,11 +45,11 @@
 \fxusetheme{colorsig}\renewcommand{\germanlistfixmename}{Verzeichnis der Anmerkungen}
 \newcommand{\SieheC}[2]{Siehe Kapitel \ref{#1} (#2) auf Seite \pageref{#1}\xspace}
 %\SetDraft{on}		%% Bindet auch die urheberrechtlich geschützen Werke ein
-%%%Body
+%%% body
 \begin{document}
 \pdfbookmark[1]{\Titlepagename}{titlepage}\pagenumbering{Roman}\thispagestyle{empty}
 \label{titelpage}
-\input{/home/rsadmin/Dokumente/LaTeX/input-document/titelpages/Epochenheft}
+\input{titelpages-EpochenheftRS.tex}
 \newpage\pdfbookmark[1]{\contentsname}{tableofcontents}
 \tableofcontents	%% Inhaltsverzeichnis
 %\vfill
@@ -103,9 +104,9 @@
     \subsection*{Versionshinweise}
     \pdfbookmark[2]{Versionshinweise}{versionshinweise}
       \input{files/git/versions-log}
-      \printgitstatlandscape{1}
+      %\printgitstatlandscape{1}
   \end{landscape}
-  \printgitstat{1}
+  %\printgitstat{1}
   \listoffixmes
 %}{}
 \end{document}
