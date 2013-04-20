@@ -1,0 +1,272 @@
+\section{Der primäre Wirtschaftssektor}
+\begin{description}
+	\item[Der primäre Wirtschaftssektor umfasst:] Die Land- und Forstwirtschaft, Fischerei und Nomadismus
+\end{description}
+Dies waren die ersten Überlebenstechniken früherer Menschen.
+
+\subsection{Landwirtschaft}
+\begin{figurewrapper}
+  \begin{tikzpicture}		%% 360*n/100; n=%
+    \foreach \start/\end/\middle/\percent/\anchor/\name in {
+      0/144/106/40/above/Getreide (Das Hauptnahrungsmittel),
+      144/198/171/15/left/Wurzelfrüchte,
+      198/252/225/15/left/Gemüse,
+      252/298.8/275.4/13/below/Milch,
+      298.8/327.6/313.2/8/right/Früchte,
+      327.6/360/343.8/9/right/Rest}
+	{
+    \draw[fill=myblue, thick] (0,0) -- (\end:3cm) arc (\end:\start:3cm)
+      node at (\middle:1.8cm) {\percent\,\%};
+    \draw (\middle:3cm) -- (\middle:3.5cm) node[\anchor] {\name};
+	};
+  \end{tikzpicture}
+  \captionof{figure}{Kreisdiagramm von 2011 über die Verteilung der Grundnahrungsmittel}
+\end{figurewrapper}
+
+\ifDraft{Entwicklung der landwirtschaftlichen Produktion: Siehe Anhang}{}
+
+Das Hauptnahrungsmittel (am meisten verzerrt) ist Getreide.
+Die Produktion aller Nahrungsmittel bleibt über 15 Jahre relativ konstant.
+Eine Ausnahme bilden die Ölfrüchte.
+Sie stieg als chemischer Rohstoff und wegen Treibstoff an (auch Seifen)
+\fxwarning{Seifen ???}
+
+\renewcommand{\longtableheader}{\textbf{Mais} & \textbf{Reis}
+& \textbf{Weizen} \\}
+\newcommand{\Schwelllc}[1]{\textcolor{green}{#1}}
+\newcommand{\Entwickllc}[1]{\textcolor{red}{#1}}
+\newcommand{\Industrielc}[1]{\textcolor{blue}{#1}}
+\newcommand{\Exportll}[1]{\textbf{#1}}
+\begin{longtable}{p{3cm}p{3cm}p{3cm}r}
+	\longtableheader
+	\endfirsthead
+
+	\longtableheader
+	\endhead
+
+	\caption{Hauptexporteure von Mais, Reis und Weizen}
+	\endlastfoot
+
+	\multicolumn{3}{r}{\longtableendfoot} & \\
+	\endfoot
+
+	\Industrielc{\Exportll{USA}}		& \Schwelllc{China}				& \Schwelllc{China}				& \\
+	\Schwelllc{China}					& \Schwelllc{Indien}			& \Schwelllc{Indien}
+	& ~~~~~\Exportll{Exporteure (Fett)} \\
+	\Schwelllc{Brar}					& \Schwelllc{Indones}			& \Industrielc{\Exportll{Europäische Union}}
+	& ~~~~~\Schwelllc{Schwellenland} \\
+	\Schwelllc{Mexiko}		& \Entwickllc{Bang}			& \Industrielc{\Exportll{USA}}
+	& ~~~~~\Entwickllc{Entwicklungsland} \\
+	\Schwelllc{\Exportll{Argentinien}}	& \Entwickllc{Vietnam}			& \Schwelllc{Russland}
+	& ~~~~~\Industrielc{Industriestaat} \\
+										&								& \Schwelllc{Pakistan}			& \\
+										&								& \Schwelllc{\Exportll{Kanada}}			& \\
+	Subtropen (Kühlgemäßigte Zone)	& Subtropen						& Subtropen (Kühlgemäßigte Zone)&
+	 ~~~~~Klimazone\\
+\end{longtable}
+
+\subsection{Verwendung der Lebensmittel}
+\begin{eqlist}
+	\item[Mais:] Futtermittel für Fleisch und Milchproduktion, Rohstoff (Stärke, Energie, Nahrungsmittel)
+	\item[Reis:] Nahrungsmittel, Rohstoff
+	\item[Weizen:] Nahrungsmittel, Futtermittel $\rightarrow$ Milch, Fleisch, Rohstoff (Stärke, Energie)
+\end{eqlist}
+
+\subsection{Voraussetzungen für die Überproduktion in der Landwirtschaft}
+\begin{figurewrapper}
+  \begin{tikzpicture}[small mindmap, concept color=gray!50, font=\sf, text=white,scale=1.5]
+	\node[concept] {}
+      child[concept color=\usedcolor, grow=0]{ node[concept,scale=1.5]{Klima- \\ zone}}
+      child[concept color=\usedcolor, grow=60]{ node[concept,scale=1.5]{Land}}
+      child[concept color=\usedcolor, grow=120]{ node[concept,scale=1.5]{Politik}}
+      child[concept color=\usedcolor, grow=180]{ node[concept,scale=1.5]{Produktiv- \\ ität}};
+  \end{tikzpicture}
+  \captionof{figure}{Mindmap: Voraussetzungen für die Überproduktion in der Landwirtschaft}
+\end{figurewrapper}
+
+\subsection{Produktions steigernde Faktoren}
+\begin{figurewrapper}
+  \begin{tikzpicture}[small mindmap, concept color=gray!50, font=\sf, text=white,scale=1.5]
+	\node[concept] {Produktivität}
+      child[concept color=\usedcolor, grow=0]{ node[concept,scale=1.5]{Maschinen}}
+      child[concept color=\usedcolor, grow=45]{ node[concept,scale=1.5]{Bildung}}
+      child[concept color=\usedcolor, grow=90]{ node[concept,scale=1.5]{Infrastruk- \\ tur}}
+      child[concept color=\usedcolor, grow=135]{ node[concept,scale=1.5]{Bewässer- \\ ung}}
+      child[concept color=\usedcolor, grow=180]{ node[concept,scale=1.5]{Trocken- \\ legung}}
+      child[concept color=\usedcolor, grow=225]{ node[concept,scale=1.5]{Speicher}}
+      child[concept color=\usedcolor, grow=270]{ node[concept,scale=1.5]{Spritz- \\ mittel}}
+      child[concept color=\usedcolor, grow=315]{ node[concept,scale=1.5]{Dünger}};
+  \end{tikzpicture}
+  \captionof{figure}{Mindmap: Produktions steigernde Faktoren}
+\end{figurewrapper}
+
+%\begin{multicols}{2}
+\begin{description}
+	\item[Maschinen:]~
+	\begin{enumerate}[{Pro }1:]
+		\item weniger Personalkosten
+		\item Qualität und Quantität
+		\item Unabhängigkeit
+		\item Geschwindigkeit
+		\item genauere, effektivere Arbeit
+	\end{enumerate}
+	\begin{enumerate}[{Kontra }1:]
+		\item Umweltbelastung durch:
+		\begin{itemize}
+			\item Öl Verlust
+			\item Reifenabrieb
+			\item Schadstoffausstoß (unter anderem \ce{CO2})
+			\item Boden Eindrückung/Verdichtung
+		\end{itemize}
+		\item weniger Personen
+		\item teure Anschaffungskosten
+		\item Wartungskosten
+		\item Fehler durch Automatisierung
+		\item Monokultur durch Flächenkonzentration
+	\end{enumerate}
+	\item[Dünger:]~
+	\begin{enumerate}[{Pro }1:]
+		\item Qualität-/Quantitätsverbesserung
+		\item weniger Spritzmittel durch gesunde Pflanzen
+	\end{enumerate}
+	\begin{enumerate}[{Kontra }1:]
+		\item hohe kosten
+		\item Bodenbelastung
+	\end{enumerate}
+	\item[Spritzmittel:]~
+	\begin{enumerate}[{Pro }1:]
+		\item weniger Verlust
+		\item weniger Schädlinge
+		\item Qualität-/Quantitätsverbesserung
+	\end{enumerate}
+	\begin{enumerate}[{Kontra }1:]
+		\item Bodenverpestung
+		\item Kosten
+		\item Geschmacksveränderung
+		\item Umweltschädigung (Gifte im Wasser, Boden)
+		\item Qualitätsminderung des Produktes durch Spritzrückstände
+	\end{enumerate}
+	\item[Trockenlegung:]~
+	\begin{enumerate}[{Pro }1:]
+		\item mehr Böden
+		\item Fruchtbarere Böden
+	\end{enumerate}
+	\begin{enumerate}[{Kontra }1:]
+		\item Kosten (Bau von Staudämmen, Entwässerungsgräben, Wartung)
+		\item Bedrohte Artenvielfalt
+		\item Zerstörung von Lebensräumen
+		\item Veränderung des Grundwasserspiegels
+		\item Oberflächenwasser fließt schneller ab
+		\item Kosten durch Haltung von Dämmen eventuell Pumpkosten
+	\end{enumerate}
+
+%	\columnbreak		%% wenn auf einer Seite
+	\ifDraft{}{\newpage}
+	\item[Bewässerung:]~
+	\begin{enumerate}[{Pro }1:]
+		\item Nutzung von Trockenland
+		\begin{itemize}
+			\item Erhöhung der Entemenge (Quantität)
+		\end{itemize}
+		\item Wasser zugeben optimieren
+		\item Nutzbarmachung von Land (zum Beispiel in Spanien, Ägypten, Israel) durch abpumpen von Grundwasser
+	\end{enumerate}
+	\begin{enumerate}[{Kontra }1:]
+		\item Wasserverbrauch
+		\item Absenkung des Grundwasserspiegels
+		\item Kosten für Pumpen und ihre Betriebskosten
+		\item Übermineralisierung (zum Beispiel Israel -- Salz)
+		\item Wegschwämmung von Böden
+	\end{enumerate}
+	\item[Speicher:]~
+	\begin{enumerate}[{Pro }1:]
+		\item längere Haltbarkeit
+		\item gute Lagerung \entspricht hoher Qualität
+	\end{enumerate}
+	\begin{enumerate}[{Kontra }1:]
+		\item hohe Bau-/Energiekosten
+		\item Unterhaltskosten
+		\item Landverlust und Zeitverlust
+	\end{enumerate}
+	\item[Infrastruktur:]~
+	\begin{enumerate}[{Pro }1:]
+		\item schneller Transport
+		\begin{itemize}
+			\item Qualität
+			\item weniger Transportverlust
+		\end{itemize}
+		\item Vermarktung der Wahren
+		\item Produkt kommt beim Konsumenten an
+		\item Personal im Transportgewerbe
+	\end{enumerate}
+	\begin{enumerate}[{Kontra }1:]
+		\item Treibstoffkosten
+		\item Versiegelung der Landschaft durch Straßen
+		\item Umweltbelastung durch Transport, Abholzung
+		\item Personalkosten
+		\item In Stand Haltung
+	\end{enumerate}
+	\item[Bildung:]~
+	\begin{enumerate}[{Pro }1:]
+		\item Fachwissen ermöglicht Produktivität
+		\item gezielter Anbau/Planung der Prozesse
+		\item sinnvolles einsetzen von oben angegebenen Hilfsmitteln
+		\item Saatgut/Züchtung
+		\item Motivation
+	\end{enumerate}
+	\begin{enumerate}[{Kontra }1:]
+		\item Zeit und Geldkosten
+	\end{enumerate}
+	\item[Saatgut/Züchtung:]~
+	\begin{enumerate}[{Pro }1:]
+		\item Ertragsmenge erhöhen die Quantität
+		\item Qualität
+		\item höhere Resistenz
+	\end{enumerate}
+	\begin{enumerate}[{Kontra }1:]
+		\item Jahre langer Zeitaufwand (eine neue Sorte circa 15 Jahre)
+		\item Hohe Kosten
+	\end{enumerate}
+\end{description}
+%\end{multicols}
+
+Zentraler Vorteil ist die Steigerung von Qualität und Quantität.
+Ein Nachteil aller Faktoren sind die Kosten.
+
+\subsection{Subventionen}
+Zuwendungen (finanziell oder materiell) ohne Gegenleistung.
+
+\renewcommand{\longtableheader}{\multicolumn{1}{c}{\textbf{direkt}} & \multicolumn{1}{c}{\textbf{indirekt}}\\}
+\begin{longtable}{ll}
+	\longtableheader
+	\endfirsthead
+	\longtableheader
+	\endhead
+	\caption{Subventionen für Landwirte}
+	\endlastfoot
+	\multicolumn{2}{r}{\longtableendfoot} \\
+	\endfoot
+
+	Flächenstilllegungsprämie & Steuersätze erniedrigt \\
+	Darlehen zu geringeren Zinsen & Steuerbefreiung \\
+	Zinsen & \\
+	Zuschüsse (Fallprämie, Pflanzenprämie) & \\
+\end{longtable}
+
+\newpage
+\subsection{Daten zu Subventionen}
+\renewcommand{\longtableheader}{}
+\begin{longtable}{ll}
+	\longtableheader
+	\endfirsthead
+	\longtableheader
+	\endhead
+	\caption{Daten zu Subventionen}
+	\endlastfoot
+	\multicolumn{2}{r}{\longtableendfoot} \\
+	\endfoot
+
+	EU 2005		& 45\,\% aus EU-Topf in Landwirtschaft\\
+	BRD 2010	& \EUR{1,5 Milliarden} zusätzlich\\
+	alle Industriestaaten zusammen & 350 Milliarden \$ im Jahr\\
+\end{longtable}

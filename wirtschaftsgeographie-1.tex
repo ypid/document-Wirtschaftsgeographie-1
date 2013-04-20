@@ -1,0 +1,111 @@
+%% <Schule/Epochenheft.tex> Vorlageversion 1.1.1 <Robin Schneider>
+%%%Präambel
+%\RequirePackage{snapshot}		%% \jobname.dep
+%\listfiles	%% listfiles in die Logdatei
+\RequirePackage{RequirePackageRS}
+\documentclass[12pt,a4paper,ngerman,numbers=noenddot,toc=listof]{scrartcl}	%% ,draft,pointednumbers,
+\usepackage{
+	physicsRS,
+	scrartclRS,
+	defaultRS,
+%	literatureRS,
+%	debugRS,
+	timeRS,
+	graphicRS,
+	mathematicsRS,
+%	gamesRS,
+	layoutRS,
+%	footingRS,
+	extensionsRS,
+	docExtensionsRS,
+	schoolRS,
+	chemistryRS,
+}
+\renewenvironment{figurewrapper}{\begin{figure}[H]\centering}{\end{figure}}
+\usetikzlibrary{mindmap,trees}
+\definecolor{myblue}{HTML}{92dcec}			%% Benutzt für Kuchendiagramm
+\definecolor{KlimaguertelEisklima}{rgb}{0.91,0.91,1}		%% {HTML}{eaeaff} FAIL
+\definecolor{KlimaguertelTundrenklima}{HTML}{19ebed}
+\definecolor{KlimaguertelBoreales}{HTML}{e465e6}
+\definecolor{KlimaguertelWarm}{HTML}{2a982a}
+\definecolor{KlimaguertelSubtropisch}{rgb}{1,0.8,0}
+\definecolor{KlimaguertelTropisch}{rgb}{0.94,0.53,0.53}
+\newcommand{\usedcolor}{green!70!black}		%% Benutzt für Tikz Mindmap
+%% Spetzifische angaben
+\readgitstat{7}
+\input{files/metainfos}
+\usepackage{
+	schoolPDFinfoRS,
+	tableRS,
+}
+%\SetDraft{on}
+\ifDraft{
+  \usepackage[draft,nomargin,inline]{fixme}}{\usepackage{fixme}}
+\fxusetheme{colorsig}\renewcommand{\germanlistfixmename}{Verzeichnis der Anmerkungen}
+\newcommand{\SieheC}[2]{Siehe Kapitel \ref{#1} (#2) auf Seite \pageref{#1}\xspace}
+%\SetDraft{on}		%% Bindet auch die urheberrechtlich geschützen Werke ein
+%%%Body
+\begin{document}
+\pdfbookmark[1]{\Titlepagename}{titlepage}\pagenumbering{Roman}\thispagestyle{empty}
+\label{titelpage}
+\input{/home/rsadmin/Dokumente/LaTeX/input-document/titelpages/Epochenheft}
+\newpage\pdfbookmark[1]{\contentsname}{tableofcontents}
+\tableofcontents	%% Inhaltsverzeichnis
+%\vfill
+\listoffigures		%% Abbildungsverzeichnis
+\listoftables		%% Tabellenverzeichnis
+%\lstlistoflistings	%% Quellcodeverzeichnis
+%\input{/home/rsadmin/Dokumente/LaTeX/Abkuerzungen/Chemie}
+
+\setcounter{headpages}{\value{page}}\newpage\pagenumbering{arabic}
+%%%%%%%%%%%
+\input{files/chapters/einleitung}
+
+\newpage
+\input{files/chapters/Wirtschaftssektor1}
+
+\ifDraft{\newpage}{}
+\input{files/chapters/Wirtschaftssektor2}
+
+\setcounter{sectionsV}{\value{section}}		%% Speichert die sectionnummer vor \appendix zwischen
+\appendix	%% Sorgt für Buchstaben im Inhaltsverzeichnis
+\newpage
+\input{files/chapters/Journalistische-Aufgabe}
+
+\vfill
+\printURLlong
+\printlicense
+\printendsignature\label{end}
+
+\newpage
+%\section*{Anhang}
+\phantomsection
+\pdfbookmark[1]{Anhang}{Anhang}
+\includepdf[pages={2},pagecommand={\thispagestyle{empty}\label{Ruhrgebiet}
+%% exit code 70
+\pdfbookmark[2]{Geschichte des Ruhrgebietes}{Ruhrgebiet}
+}]{files/Tabellen_for_import}
+%\ifDraft{
+  \newpage\Statistiken
+  Status:~\progressbar{.99} (eigenes Ermessen)
+%}{}
+%\ifDraft{
+  \begin{landscape}
+%	\newpage
+  \begin{sourcefiletable}{1}
+    \sourcefile{Hauptdatei}{\jobname.tex}
+    \sourcefile{Metainformationen}{files/metainfos.tex}
+    \Isourcefile{Einleitung}{files/chapters/einleitung.tex}
+    \Isourcefile{Primäre Wirtschaftssektor}{files/chapters/Wirtschaftssektor1.tex}
+    \Isourcefile{Sekundärer Wirtschaftssektor}{files/chapters/Wirtschaftssektor2.tex}
+    \Isourcefile{Journalistische-Aufgabe}{files/chapters/Journalistische-Aufgabe.tex}
+  \end{sourcefiletable}
+    \subsection*{Versionshinweise}
+    \pdfbookmark[2]{Versionshinweise}{versionshinweise}
+      \input{files/git/versions-log}
+      \printgitstatlandscape{1}
+  \end{landscape}
+  \printgitstat{1}
+  \listoffixmes
+%}{}
+\end{document}
